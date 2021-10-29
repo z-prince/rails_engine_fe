@@ -1,6 +1,6 @@
 # Consuming your Rails Engine API
 
-Congratulations! You've written your first API. Just like the API you consumed for your week 1 project, your Rails Engine API can be used by other projects now, too. For this challenge, you will create a front end application to consume the Rails Engine API you have just created.
+Congratulations! You've written your first API. Just like the API you consumed for your week 1 project, your Rails Engine API can be used by other projects now, too. For this challenge, you will create a front end application that will make call to your backend application, the Rails Engine API you have just created.
 
 ## Setup
 
@@ -28,6 +28,8 @@ We do this because Rails Engine is not in production or hosted somewhere other t
 ```ruby
 port        ENV.fetch("PORT") { 5000 }
 ```
+
+**In order for your frontend to properly get data from your backend Rails Engine API, you must keep your backend server running locally at the same time.**
 
 ## The Challenge
 
