@@ -2,12 +2,11 @@ require 'rails_helper'
 
 RSpec.describe MerchantsService do
   it '#get_merchants retrieves data and parses response', :vcr do
-    parsed_json = MoviesService.get_top_rated
+    parsed_json = MerchantsService.get_merchants
     expect(parsed_json).to be_a Array
-    movie = parsed_json.first
-    expect(movie).to be_a Hash
-    expect(movie).to include :title, :vote_average
-    expect(movie[:title]).to be_a String
-    expect(movie[:vote_average]).to be_a Float
+    merchant = parsed_json.first
+    expect(merchant).to be_a Hash
+    expect(merchant[:attributes]).to include :name
+    expect(merchant[:attributes][:name]).to be_a String
   end
 end
